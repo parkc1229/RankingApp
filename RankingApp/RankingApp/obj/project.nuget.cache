@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3bim3n3ZDJdmokKNDY6UpGUw36evPBYcpfMf3/wFwYMOc712j6Jr1J32A3olhmQNaSgGrqUZ9R5iioPSrHZZhA==",
+  "success": true,
+  "projectFilePath": "/Users/chrispark/Projects/RankingApp/RankingApp/RankingApp/RankingApp.csproj",
+  "expectedPackageFiles": [
+    "/Users/chrispark/.nuget/packages/microsoft.aspnetcore.spaproxy/7.0.11/microsoft.aspnetcore.spaproxy.7.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
