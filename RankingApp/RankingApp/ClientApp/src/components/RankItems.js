@@ -1,10 +1,15 @@
-﻿import {useEffect } from 'react';
+﻿import {useEffect, useState } from 'react';
 import MovieImageArr from "./MovieImages.js";
 import RankingGrid from "./RankingGrid";
 import ItemCollection from "./ItemCollection";
 
 const RankItems = ({items, setItems, dataType, imgArr, localStorageKey }) => {
 
+    const [reload, setReload] = useState(false);
+
+    function Reload() {
+        setReload(true);
+    }
 
     function drag(ev) {
         ev.dataTransfer.setData("text", ev.target.id);
@@ -31,6 +36,12 @@ const RankItems = ({items, setItems, dataType, imgArr, localStorageKey }) => {
     }
 
     useEffect(() => {
+        if (items == null) {
+            getDataFromApi();
+        }
+    }, [dataType]);
+
+    function getDataFromApi() {
         fetch(`item/${dataType}`)
             .then((results) => {
                 return results.json();
@@ -38,20 +49,27 @@ const RankItems = ({items, setItems, dataType, imgArr, localStorageKey }) => {
             .then(data => {
                 setItems(data);
             })
-    }, [dataType]);
+    }
 
     useEffect(() => {
         if (items != null) {
             localStorage.setItem(localStorageKey, JSON.stringify(items));
         }
+        setReload(false);
     },[items])
 
+    useEffect(() => {
+        if (reload === true) {
+            getDataFromApi();
+        }
+    }, [reload])
 
     return (
         (items != null)?
             <main>
                 <RankingGrid items={items} imgArr={imgArr} drag={drag} allowDrop={allowDrop} drop={drop} />
                 <ItemCollection items={items} drag={drag} imgArr={imgArr} />
+                <button onClick={Reload} className="reload" style={{ "marginTop": "10px" }}> <span class="text" >Reload</span > </button>
             </main>
             : <main>Loading...</main>
     )
