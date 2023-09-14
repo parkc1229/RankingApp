@@ -77,9 +77,14 @@ main {
     background-color: red;
 }
 
-.ranked-cell, .row-label {
+.rank-cell, .row-label {
     width: 80px;
     text-align: center;
     display: flex;
     align-items: center;
+}
+
+.unranked-cell img, .rank-cell img {
+    width: 100%;
+    height: 100%;
 }
