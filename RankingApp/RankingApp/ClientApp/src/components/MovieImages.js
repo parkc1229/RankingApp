@@ -6,7 +6,7 @@ import PoliceAcademy6 from '../images/movies/PoliceAcademy6.png';
 import RearWindow from '../images/movies/RearWindow.png';
 import RoadHouse from '../images/movies/RoadHouse.png';
 import Shawshank from '../images/movies/Shawshank.png';
-import StarTrack4 from '../images/movies/StarTreck4.png';
+import StarTreck4 from '../images/movies/StarTreck4.png';
 import Superman4 from '../images/movies/Superman4.png';
 
 const MovieImageArr = [
