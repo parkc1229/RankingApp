@@ -18,7 +18,7 @@ const MovieImageArr = [
     { id: 6, image: RearWindow },
     { id: 7, image: RoadHouse },
     { id: 8, image: Shawshank },
-    { id: 9, image: StarTrack4 },
+    { id: 9, image: StarTreck4 },
     { id: 10, image: Superman4 },
 
 ];
