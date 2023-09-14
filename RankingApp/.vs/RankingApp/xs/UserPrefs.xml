@@ -1,33 +1,36 @@
 ﻿<Properties StartupConfiguration="{B07B370F-2898-4E57-869A-F8BA6F23740E}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.RankingApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="RankingApp/Controllers/ItemController.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.RankingApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RankingApp/ClientApp/src/components/MovieImages.js">
     <Files>
-      <File FileName="RankingApp/Models/ItemModel.cs" Line="15" Column="1" />
-      <File FileName="RankingApp/Controllers/ItemController.cs" Line="42" Column="10" />
-      <File FileName="RankingApp/ClientApp/src/components/RankItems.js" Line="6" Column="24" />
-      <File FileName="RankingApp/ClientApp/src/AppRoutes.js" Line="4" Column="48" />
-      <File FileName="RankingApp/ClientApp/src/components/NavMenu.js" Line="42" Column="86" />
-      <File FileName="RankingApp/ClientApp/src/setupProxy.js" Line="9" Column="14" />
+      <File FileName="RankingApp/Models/ItemModel.cs" />
+      <File FileName="RankingApp/Controllers/ItemController.cs" Line="41" Column="49" />
+      <File FileName="RankingApp/ClientApp/src/components/RankItems.js" Line="7" Column="1" />
+      <File FileName="RankingApp/ClientApp/src/AppRoutes.js" />
+      <File FileName="RankingApp/ClientApp/src/components/NavMenu.js" />
+      <File FileName="RankingApp/ClientApp/src/setupProxy.js" />
+      <File FileName="RankingApp/Program.cs" Line="21" Column="1" />
+      <File FileName="RankingApp/ClientApp/src/components/MovieImages.js" Line="5" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RankingApp">
             <Node name="RankingApp">
-              <Node name="ClientApp">
-                <Node name="src">
-                  <Node name="App.js" expanded="True" />
+              <Node name="ClientApp" expanded="True">
+                <Node name="src" expanded="True">
+                  <Node name="components" expanded="True" />
+                  <Node name="images">
+                    <Node name="Movies" expanded="True" />
+                  </Node>
                 </Node>
               </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="ItemController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
             </Node>
           </Node>
