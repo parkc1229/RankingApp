@@ -1,8 +1,12 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Microsoft.EntityFrameworkCore;
+using RankingApp.Models;
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<TodoContext>(opt =>
+    opt.UseInMemoryDatabase("InitialCreate"));
 
 var app = builder.Build();
 

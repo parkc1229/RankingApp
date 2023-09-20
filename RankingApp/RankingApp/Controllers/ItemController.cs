@@ -1,11 +1,13 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using RankingApp.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace RankingApp.Controllers
 {
+    [Route("api/Item")]
     [ApiController]
-    [Route("[controller]")]
     public class ItemController : ControllerBase
     {
         private static readonly IEnumerable<ItemModel> Items = new[]
@@ -33,12 +35,75 @@ namespace RankingApp.Controllers
 
         };
 
+        /*
         [HttpGet("{itemType:int}")]
         public ItemModel[] Get(int itemType)
         {
             ItemModel[] items = Items.Where(i => i.ItemType == itemType).ToArray();
             return items;
         }
+        */
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ItemModel>> GetItemModel(int id)
+        {
+            var tItem = await _context.Item.FindAsync(id);
+
+            if (tItem == null)
+            {
+                return NotFound();
+            }
+
+            return tItem;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<ItemModel>> PostItem(ItemModel itemModel)
+        {
+            _context.Item.Add(itemModel);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetItemModel), new { id = itemModel.Id }, itemModel);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutItemModel(int id, ItemModel itemModel)
+        {
+            if (id != itemModel.Id)
+                return BadRequest();
+
+            _context.Entry(itemModel).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch(DbUpdateConcurrencyException)
+            {
+                if (!ItemModelExists(id))
+                    return NotFound();
+                else
+                    throw;
+            }
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteItemModel(int id)
+        {
+            var itemModel = await _context.Item.FindAsync(id);
+            if (itemModel == null)
+                return NotFound();
+
+            _context.Item.Remove(itemModel);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        
+        
     }
 }
 
