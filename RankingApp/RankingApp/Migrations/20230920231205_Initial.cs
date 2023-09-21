@@ -5,13 +5,13 @@
 namespace RankingApp.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ItemList",
+                name: "ItemModels",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -19,12 +19,11 @@ namespace RankingApp.Migrations
                     Title = table.Column<string>(type: "TEXT", nullable: false),
                     ImageId = table.Column<int>(type: "INTEGER", nullable: false),
                     Ranking = table.Column<int>(type: "INTEGER", nullable: false),
-                    ItemType = table.Column<int>(type: "INTEGER", nullable: false),
-                    RankingsId = table.Column<int>(type: "INTEGER", nullable: false)
+                    ItemType = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ItemList", x => x.Id);
+                    table.PrimaryKey("PK_ItemModels", x => x.Id);
                 });
         }
 
@@ -32,7 +31,7 @@ namespace RankingApp.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ItemList");
+                name: "ItemModels");
         }
     }
 }

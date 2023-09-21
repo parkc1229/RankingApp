@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace RankingApp.Models
 {
+    /*
     public class RankingContext : DbContext
     {
         public DbSet<ItemModel> ItemList { get; set; }
@@ -21,6 +22,7 @@ namespace RankingApp.Models
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite($"Data Source={DbPath}");
     }
+    */
 
     public class ItemModel
     {
@@ -30,11 +32,11 @@ namespace RankingApp.Models
         public int Ranking { get; set; }
         public int ItemType { get; set; }
 
-        public int RankedId { get; set; }
-        public RankingsModel RankingsModel { get; set; }
+        //public int RankedId { get; set; }
+       // public RankingsModel RankingsModel { get; set; }
     }
 
-    
+    /*
     public class RankingsModel
     {
         
@@ -46,6 +48,7 @@ namespace RankingApp.Models
 
 
     }
+    */
 
 }
 

@@ -3,13 +3,52 @@ using Microsoft.AspNetCore.Mvc;
 using RankingApp.Models;
 using System.Linq;
 using System.Threading.Tasks;
+using RankingApp.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace RankingApp.Controllers
 {
-    [Route("api/Item")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ItemController : ControllerBase
     {
+        private readonly DataContext _context;
+
+        public ItemController(DataContext context)
+        {
+            _context = context;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<List<ItemModel>>> AddItem(ItemModel item)
+        {
+            _context.ItemModels.Add(item);
+            await _context.SaveChangesAsync();
+
+            return Ok(await _context.ItemModels.ToListAsync());
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<ItemModel>>> GetAllItems()
+        {
+            return Ok(await _context.ItemModels.ToListAsync());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ItemModel>> GetItem(int id)
+        {
+            var item = await _context.ItemModels.FindAsync(id);
+            if(item == null)
+            {
+                return BadRequest("Item not found.");
+            }
+            return Ok(item);
+
+        }
+
+
+
+
         private static readonly IEnumerable<ItemModel> Items = new[]
         {
             new ItemModel{Id =1, Title = "The Godfather", ImageId=1, Ranking=0,ItemType=1 },
@@ -42,65 +81,8 @@ namespace RankingApp.Controllers
             ItemModel[] items = Items.Where(i => i.ItemType == itemType).ToArray();
             return items;
         }
+        
         */
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ItemModel>> GetItemModel(int id)
-        {
-            var tItem = await _context.Item.FindAsync(id);
-
-            if (tItem == null)
-            {
-                return NotFound();
-            }
-
-            return tItem;
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<ItemModel>> PostItem(ItemModel itemModel)
-        {
-            _context.Item.Add(itemModel);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetItemModel), new { id = itemModel.Id }, itemModel);
-        }
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutItemModel(int id, ItemModel itemModel)
-        {
-            if (id != itemModel.Id)
-                return BadRequest();
-
-            _context.Entry(itemModel).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch(DbUpdateConcurrencyException)
-            {
-                if (!ItemModelExists(id))
-                    return NotFound();
-                else
-                    throw;
-            }
-
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteItemModel(int id)
-        {
-            var itemModel = await _context.Item.FindAsync(id);
-            if (itemModel == null)
-                return NotFound();
-
-            _context.Item.Remove(itemModel);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
 
         
         

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "ImLw+xvgr7Ravk3zdnvhAUd1MAkDwrHtSeEj1/xJbZ9fQQDdq1E7zO92nHgFnzuFWlDO0b9dbVJjlccnf+P6TA==",
-  "success": false,
+  "dgSpecHash": "eM36XmFI2pLFJGzPxm2/CNc99sGGs3NvcQViu0KUryHx7wCH2jp2ZjbT7m0Z3Cqm08e6Hx5+1WInDGu/Pi/yWw==",
+  "success": true,
   "projectFilePath": "/Users/chrispark/Projects/RankingApp/RankingApp/RankingApp/RankingApp.csproj",
   "expectedPackageFiles": [
     "/Users/chrispark/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
@@ -39,7 +39,7 @@
     "/Users/chrispark/.nuget/packages/microsoft.entityframeworkcore/7.0.11/microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.11/microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.11/microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",
-    "/Users/chrispark/.nuget/packages/microsoft.entityframeworkcore.design/7.0.0/microsoft.entityframeworkcore.design.7.0.0.nupkg.sha512",
+    "/Users/chrispark/.nuget/packages/microsoft.entityframeworkcore.design/7.0.11/microsoft.entityframeworkcore.design.7.0.11.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.11/microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/microsoft.entityframeworkcore.sqlite/7.0.11/microsoft.entityframeworkcore.sqlite.7.0.11.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/7.0.11/microsoft.entityframeworkcore.sqlite.core.7.0.11.nupkg.sha512",
@@ -195,15 +195,5 @@
     "/Users/chrispark/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: Microsoft.EntityFrameworkCore.Design from 7.0.11 to 7.0.0. Reference the package directly from the project to select a different version. \n RankingApp -> Microsoft.EntityFrameworkCore.Tools 7.0.11 -> Microsoft.EntityFrameworkCore.Design (>= 7.0.11) \n RankingApp -> Microsoft.EntityFrameworkCore.Design (>= 7.0.0)",
-      "libraryId": "Microsoft.EntityFrameworkCore.Design",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

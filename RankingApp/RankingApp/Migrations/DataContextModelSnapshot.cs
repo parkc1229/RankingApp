@@ -2,14 +2,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RankingApp.Models;
+using RankingApp.Data;
 
 #nullable disable
 
 namespace RankingApp.Migrations
 {
-    [DbContext(typeof(RankingContext))]
-    partial class RankingContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(DataContext))]
+    partial class DataContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -31,16 +31,13 @@ namespace RankingApp.Migrations
                     b.Property<int>("Ranking")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("RankingsId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("ItemList");
+                    b.ToTable("ItemModels");
                 });
 #pragma warning restore 612, 618
         }

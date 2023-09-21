@@ -1,12 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RankingApp.Models;
+using RankingApp.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<TodoContext>(opt =>
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+/*
+builder.Services.AddDbContext<RankingContext>(opt =>
     opt.UseInMemoryDatabase("InitialCreate"));
+*/
 
 var app = builder.Build();
 

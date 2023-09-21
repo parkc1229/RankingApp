@@ -3,15 +3,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RankingApp.Models;
+using RankingApp.Data;
 
 #nullable disable
 
 namespace RankingApp.Migrations
 {
-    [DbContext(typeof(RankingContext))]
-    [Migration("20230920044611_InitialCreate")]
-    partial class InitialCreate
+    [DbContext(typeof(DataContext))]
+    [Migration("20230920231205_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,16 +34,13 @@ namespace RankingApp.Migrations
                     b.Property<int>("Ranking")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("RankingsId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("ItemList");
+                    b.ToTable("ItemModels");
                 });
 #pragma warning restore 612, 618
         }
