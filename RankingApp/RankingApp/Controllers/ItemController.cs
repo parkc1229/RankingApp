@@ -74,7 +74,7 @@ namespace RankingApp.Controllers
 
         };
 
-        /*
+        
         [HttpGet("{itemType:int}")]
         public ItemModel[] Get(int itemType)
         {
@@ -82,7 +82,7 @@ namespace RankingApp.Controllers
             return items;
         }
         
-        */
+        
 
         
         

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "eM36XmFI2pLFJGzPxm2/CNc99sGGs3NvcQViu0KUryHx7wCH2jp2ZjbT7m0Z3Cqm08e6Hx5+1WInDGu/Pi/yWw==",
+  "dgSpecHash": "KAI8wUSp562OGbJ5hevIjNCxxjuUd22P3pMXi+VdJZYxTQQv1btvxKBInUGjPe1Laa3cyqGRpX0odzBVoYSJbw==",
   "success": true,
   "projectFilePath": "/Users/chrispark/Projects/RankingApp/RankingApp/RankingApp/RankingApp.csproj",
   "expectedPackageFiles": [
     "/Users/chrispark/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
+    "/Users/chrispark/.nuget/packages/dapper/2.0.151/dapper.2.0.151.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/messagepack.annotations/2.1.152/messagepack.annotations.2.1.152.nupkg.sha512",
