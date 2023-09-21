@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace RankingApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Item")]
     [ApiController]
     public class ItemController : ControllerBase
     {
@@ -22,33 +22,112 @@ namespace RankingApp.Controllers
         [HttpPost]
         public async Task<ActionResult<List<ItemModel>>> AddItem(ItemModel item)
         {
+            /*
             _context.ItemModels.Add(item);
             await _context.SaveChangesAsync();
 
             return Ok(await _context.ItemModels.ToListAsync());
+            */
+
+            _context.ItemModels.Add(item);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetItem), new { id = item.Id }, item);
         }
 
         [HttpGet]
         public async Task<ActionResult<List<ItemModel>>> GetAllItems()
         {
-            return Ok(await _context.ItemModels.ToListAsync());
+            //return Ok(await _context.ItemModels.ToListAsync());
+
+            if(_context.ItemModels == null)
+            {
+                return NotFound();
+            }
+
+            return await _context.ItemModels.ToListAsync();
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<ItemModel>> GetItem(int id)
         {
+            /*
             var item = await _context.ItemModels.FindAsync(id);
             if(item == null)
             {
                 return BadRequest("Item not found.");
             }
             return Ok(item);
+            */
+
+            if(_context.ItemModels == null)
+            {
+                return NotFound();
+            }
+            var itemModel = await _context.ItemModels.FindAsync(id);
+
+            if(itemModel == null)
+            {
+                return NotFound();
+            }
+
+            return itemModel;
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutItem(int id, ItemModel itemModel)
+        {
+            if (id != itemModel.Id)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if(!ItemModelExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
 
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteItem(int id)
+        {
+            if(_context.ItemModels == null)
+            {
+                return NotFound();
+            }
+            var itemModel = await _context.ItemModels.FindAsync(id);
+            if(itemModel == null)
+            {
+                return NotFound();
+            }
+
+            _context.ItemModels.Remove(itemModel);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
 
 
+        private bool ItemModelExists(int id)
+        {
+            return (_context.ItemModels?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
 
+        /*
         private static readonly IEnumerable<ItemModel> Items = new[]
         {
             new ItemModel{Id =1, Title = "The Godfather", ImageId=1, Ranking=0,ItemType=1 },
@@ -73,15 +152,16 @@ namespace RankingApp.Controllers
             new ItemModel{Id = 20, Title = "The Final Countdown", ImageId=20, Ranking=0,ItemType=2 }
 
         };
+        */
 
-        
+        /*
         [HttpGet("{itemType:int}")]
         public ItemModel[] Get(int itemType)
         {
             ItemModel[] items = Items.Where(i => i.ItemType == itemType).ToArray();
             return items;
         }
-        
+        */
         
 
         

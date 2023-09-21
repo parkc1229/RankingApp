@@ -6,27 +6,34 @@
   <MonoDevelop.Ide.ItemProperties.RankingApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RankingApp/ClientApp/src/components/RankItems.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RankingApp/SqliteDataAccess.cs">
     <Files>
-      <File FileName="RankingApp/ClientApp/src/components/RankItems.js" Line="72" Column="105" />
-      <File FileName="RankingApp/ClientApp/src/components/RankingGrid.js" Line="86" Column="28" />
-      <File FileName="RankingApp/ClientApp/src/components/Item.js" Line="1" Column="39" />
-      <File FileName="RankingApp/ClientApp/src/components/NavMenu.js" />
-      <File FileName="RankingApp/ClientApp/src/components/RankItemsContainer.js" Line="37" Column="35" />
-      <File FileName="RankingApp/Controllers/ItemController.cs" Line="9" Column="20" />
-      <File FileName="RankingApp/Models/ItemModel.cs" Line="36" Column="10" />
-      <File FileName="RankingApp/Program.cs" Line="9" Column="3" />
+      <File FileName="RankingApp/ClientApp/src/components/RankItems.js" />
+      <File FileName="RankingApp/ClientApp/src/components/RankingGrid.js" />
+      <File FileName="RankingApp/ClientApp/src/components/Item.js" />
+      <File FileName="RankingApp/ClientApp/src/components/RankItemsContainer.js" />
+      <File FileName="RankingApp/Controllers/ItemController.cs" />
+      <File FileName="RankingApp/Models/ItemModel.cs" />
+      <File FileName="RankingApp/Program.cs" />
       <File FileName="RankingApp/ClientApp/src/components/ItemCollection.js" />
       <File FileName="RankingApp/ClientApp/src/setupProxy.js" />
+      <File FileName="RankingApp/appsettings.json" />
+      <File FileName="RankingApp/Data/DataContext.cs" />
+      <File FileName="RankingApp/Migrations/20230920231205_Initial.cs" />
+      <File FileName="RankingApp/ClientApp/src/components/AlbumImages.js" />
+      <File FileName="RankingApp/ClientApp/src/components/MovieImages.js" />
+      <File FileName="RankingApp/ClientApp/src/AppRoutes.js" />
+      <File FileName="RankingApp/SqliteDataAccess.cs" Line="1" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RankingApp">
-            <Node name="RankingApp" selected="True">
+            <Node name="RankingApp">
               <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
-                <Node name="PackageDependencies" expanded="True" />
+                <Node name="PackageDependencies" expanded="True">
+                  <Node name="Microsoft.VisualStudio.Web.CodeGeneration.Design" selected="True" />
+                </Node>
               </Node>
               <Node name="ClientApp" expanded="True">
                 <Node name="src" expanded="True">
@@ -39,7 +46,10 @@
                 </Node>
               </Node>
               <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True" />
             </Node>
           </Node>
         </State>

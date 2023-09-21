@@ -12,7 +12,7 @@ namespace RankingApp.Data
 		}
 
 
-		public DbSet<ItemModel> ItemModels => Set<ItemModel>();
+		public DbSet<ItemModel> ItemModels { get; set; } = null;
 	}
 }
 

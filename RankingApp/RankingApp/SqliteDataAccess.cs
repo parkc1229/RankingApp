@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 using RankingApp.Models;
 
 namespace RankingApp
@@ -22,3 +23,4 @@ namespace RankingApp
 	}
 }
 
+*/
