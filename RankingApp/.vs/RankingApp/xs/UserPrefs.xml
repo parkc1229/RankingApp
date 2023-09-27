@@ -1,15 +1,14 @@
 ﻿<Properties StartupConfiguration="{B07B370F-2898-4E57-869A-F8BA6F23740E}|Default">
+  <MonoDevelop.Ide.ItemProperties.RankingApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.RankingApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RankingApp/SqliteDataAccess.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RankingApp/ClientApp/src/components/RankingGrid.js">
     <Files>
       <File FileName="RankingApp/ClientApp/src/components/RankItems.js" />
-      <File FileName="RankingApp/ClientApp/src/components/RankingGrid.js" />
+      <File FileName="RankingApp/ClientApp/src/components/RankingGrid.js" Line="1" Column="1" />
       <File FileName="RankingApp/ClientApp/src/components/Item.js" />
       <File FileName="RankingApp/ClientApp/src/components/RankItemsContainer.js" />
       <File FileName="RankingApp/Controllers/ItemController.cs" />
@@ -18,26 +17,22 @@
       <File FileName="RankingApp/ClientApp/src/components/ItemCollection.js" />
       <File FileName="RankingApp/ClientApp/src/setupProxy.js" />
       <File FileName="RankingApp/appsettings.json" />
-      <File FileName="RankingApp/Data/DataContext.cs" />
       <File FileName="RankingApp/Migrations/20230920231205_Initial.cs" />
       <File FileName="RankingApp/ClientApp/src/components/AlbumImages.js" />
       <File FileName="RankingApp/ClientApp/src/components/MovieImages.js" />
       <File FileName="RankingApp/ClientApp/src/AppRoutes.js" />
-      <File FileName="RankingApp/SqliteDataAccess.cs" Line="1" Column="3" />
+      <File FileName="RankingApp/SqliteDataAccess.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RankingApp">
-            <Node name="RankingApp">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True">
-                  <Node name="Microsoft.VisualStudio.Web.CodeGeneration.Design" selected="True" />
-                </Node>
-              </Node>
+            <Node name="RankingApp" expanded="True">
               <Node name="ClientApp" expanded="True">
                 <Node name="src" expanded="True">
-                  <Node name="components" expanded="True" />
+                  <Node name="components" expanded="True">
+                    <Node name="RankingGrid.js" selected="True" />
+                  </Node>
                   <Node name="images" expanded="True">
                     <Node name="albums" expanded="True" />
                     <Node name="movies" expanded="True" />
@@ -46,7 +41,6 @@
                 </Node>
               </Node>
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True" />
@@ -56,4 +50,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

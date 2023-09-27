@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Do0soaEG8z64K78PxU1iivOa6YN+F3dOR2wXoN5Aya5M+1dU8O+gfihKw9n0RCDkEOnfKqADR31O4trVMjPs9A==",
+  "dgSpecHash": "m85QMesEZ3hrb69aNCxebWomFBS0LDjqEPDZnpS7DMf2LtXqgklGiJrcRz3d7r15Wqmoud9gpLTUDAzWu2ADGg==",
   "success": true,
   "projectFilePath": "/Users/chrispark/Projects/RankingApp/RankingApp/RankingApp/RankingApp.csproj",
   "expectedPackageFiles": [
+    "/Users/chrispark/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/chrispark/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/dapper/2.0.151/dapper.2.0.151.nupkg.sha512",
@@ -31,7 +33,7 @@
     "/Users/chrispark/.nuget/packages/microsoft.codeanalysis.visualbasic.workspaces/4.0.0/microsoft.codeanalysis.visualbasic.workspaces.4.0.0.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/microsoft.codeanalysis.workspaces.common/4.0.0/microsoft.codeanalysis.workspaces.common.4.0.0.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/microsoft.codeanalysis.workspaces.msbuild/4.0.0/microsoft.codeanalysis.workspaces.msbuild.4.0.0.nupkg.sha512",
-    "/Users/chrispark/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/chrispark/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/microsoft.data.sqlclient/5.0.1/microsoft.data.sqlclient.5.0.1.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/microsoft.data.sqlclient.sni.runtime/5.0.1/microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "/Users/chrispark/.nuget/packages/microsoft.data.sqlite.core/7.0.11/microsoft.data.sqlite.core.7.0.11.nupkg.sha512",

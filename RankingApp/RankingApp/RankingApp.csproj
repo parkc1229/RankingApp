@@ -29,6 +29,7 @@
     </PackageReference>
     <PackageReference Include="Dapper" Version="2.0.151" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,12 +41,14 @@
     <None Remove="ClientApp\src\images\albums\" />
     <None Remove="Data\" />
     <None Remove="sqlite.db" />
+    <None Remove="ViewModel\" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ClientApp\src\images\albums\" />
     <Folder Include="Data\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="sqlite.db">

@@ -11,6 +11,8 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite("Data Source=sqlite.db"));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddControllersWithViews();
 /*
 builder.Services.AddDbContext<RankingContext>(opt =>
     opt.UseInMemoryDatabase("InitialCreate"));

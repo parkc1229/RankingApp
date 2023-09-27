@@ -5,18 +5,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using RankingApp.Data;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using RankingApp.ViewModel;
 
 namespace RankingApp.Controllers
 {
     [Route("api/Item")]
     [ApiController]
-    public class ItemController : ControllerBase
+    public class ItemController : Controller
     {
         private readonly DataContext _context;
+        private readonly IMapper _mapper;
 
-        public ItemController(DataContext context)
+
+
+        public ItemController(DataContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpPost]
