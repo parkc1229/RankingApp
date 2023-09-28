@@ -7,6 +7,7 @@ using RankingApp.Data;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using RankingApp.ViewModel;
+using RankingApp.DAL;
 
 namespace RankingApp.Controllers
 {
@@ -14,15 +15,16 @@ namespace RankingApp.Controllers
     [ApiController]
     public class ItemController : Controller
     {
+        private IItemModelRepository itemModelRepository;
         private readonly DataContext _context;
         private readonly IMapper _mapper;
-
 
 
         public ItemController(DataContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
+            this.itemModelRepository = new ItemModelRepository(new DataContext());
         }
 
         [HttpPost]

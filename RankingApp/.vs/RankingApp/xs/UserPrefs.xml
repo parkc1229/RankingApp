@@ -1,19 +1,18 @@
 ﻿<Properties StartupConfiguration="{B07B370F-2898-4E57-869A-F8BA6F23740E}|Default">
-  <MonoDevelop.Ide.ItemProperties.RankingApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RankingApp/ClientApp/src/components/RankingGrid.js">
+  <MonoDevelop.Ide.ItemProperties.RankingApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RankingApp/Controllers/ItemController.cs">
     <Files>
       <File FileName="RankingApp/ClientApp/src/components/RankItems.js" />
       <File FileName="RankingApp/ClientApp/src/components/RankingGrid.js" Line="1" Column="1" />
       <File FileName="RankingApp/ClientApp/src/components/Item.js" />
       <File FileName="RankingApp/ClientApp/src/components/RankItemsContainer.js" />
-      <File FileName="RankingApp/Controllers/ItemController.cs" />
-      <File FileName="RankingApp/Models/ItemModel.cs" />
-      <File FileName="RankingApp/Program.cs" />
+      <File FileName="RankingApp/Program.cs" Line="13" Column="34" />
       <File FileName="RankingApp/ClientApp/src/components/ItemCollection.js" />
       <File FileName="RankingApp/ClientApp/src/setupProxy.js" />
       <File FileName="RankingApp/appsettings.json" />
@@ -22,17 +21,20 @@
       <File FileName="RankingApp/ClientApp/src/components/MovieImages.js" />
       <File FileName="RankingApp/ClientApp/src/AppRoutes.js" />
       <File FileName="RankingApp/SqliteDataAccess.cs" />
+      <File FileName="RankingApp/Models/ItemModel.cs" Line="33" Column="42" />
+      <File FileName="RankingApp/ViewModel/ItemViewModel.cs" Line="11" Column="9" />
+      <File FileName="RankingApp/ItemProfile.cs" Line="27" Column="62" />
+      <File FileName="RankingApp/Controllers/ItemController.cs" Line="21" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RankingApp">
             <Node name="RankingApp" expanded="True">
+              <Node name="Dependencies" expanded="True" />
               <Node name="ClientApp" expanded="True">
                 <Node name="src" expanded="True">
-                  <Node name="components" expanded="True">
-                    <Node name="RankingGrid.js" selected="True" />
-                  </Node>
+                  <Node name="components" expanded="True" />
                   <Node name="images" expanded="True">
                     <Node name="albums" expanded="True" />
                     <Node name="movies" expanded="True" />
@@ -44,11 +46,11 @@
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

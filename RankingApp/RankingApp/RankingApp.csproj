@@ -42,6 +42,7 @@
     <None Remove="Data\" />
     <None Remove="sqlite.db" />
     <None Remove="ViewModel\" />
+    <None Remove="DAL\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,6 +50,7 @@
     <Folder Include="ClientApp\src\images\albums\" />
     <Folder Include="Data\" />
     <Folder Include="ViewModel\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="sqlite.db">
