@@ -15,6 +15,7 @@ namespace RankingApp.Controllers
     [ApiController]
     public class ItemController : Controller
     {
+        private UnitOfWork unitOfWork = new UnitOfWork();
         private IItemModelRepository itemModelRepository;
         private readonly DataContext _context;
         private readonly IMapper _mapper;
