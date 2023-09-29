@@ -38,6 +38,12 @@ namespace RankingApp.Controllers
             return Ok(await _context.ItemModels.ToListAsync());
             */
 
+            if(ModelState.IsValid)
+            {
+                unitOfWork.ItemRepository.Insert(item);
+                unitOfWork.Save();
+            }
+
             _context.ItemModels.Add(item);
             await _context.SaveChangesAsync();
 
@@ -48,6 +54,8 @@ namespace RankingApp.Controllers
         public async Task<ActionResult<List<ItemModel>>> GetAllItems()
         {
             //return Ok(await _context.ItemModels.ToListAsync());
+
+            var items = unitOfWork.ItemRepository.Get();
 
             if(_context.ItemModels == null)
             {
@@ -68,6 +76,8 @@ namespace RankingApp.Controllers
             }
             return Ok(item);
             */
+
+            ItemModel item = unitOfWork.ItemRepository.GetByID(id);
 
             if(_context.ItemModels == null)
             {
@@ -93,6 +103,7 @@ namespace RankingApp.Controllers
 
             try
             {
+                ItemModel item = unitOfWork.ItemRepository.GetByID(id);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -124,6 +135,16 @@ namespace RankingApp.Controllers
                 return NotFound();
             }
 
+            /*
+            ItemModel item = itemModelRepository.GetItemByID(id);
+            itemModelRepository.DeleteItem(id);
+            itemModelRepository.Save();
+            */
+
+            ItemModel item = unitOfWork.ItemRepository.GetByID(id);
+            unitOfWork.ItemRepository.Delete(id);
+            unitOfWork.Save();
+
             _context.ItemModels.Remove(itemModel);
             await _context.SaveChangesAsync();
 
@@ -134,6 +155,12 @@ namespace RankingApp.Controllers
         private bool ItemModelExists(int id)
         {
             return (_context.ItemModels?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            unitOfWork.Dispose();
+            base.Dispose(disposing);
         }
 
         /*
@@ -171,10 +198,10 @@ namespace RankingApp.Controllers
             return items;
         }
         */
-        
 
-        
-        
+
+
+
     }
 }
 
